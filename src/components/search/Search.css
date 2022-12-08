@@ -1,0 +1,16 @@
+input[type=text] {
+    transition: all 3s ease;
+    width: 35%;
+    padding: 0.45rem 1rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    box-shadow: 0.2rem 0.2rem rgba(245,245,245,0.3);
+  }
+
+form div {
+    margin: 0
+}
