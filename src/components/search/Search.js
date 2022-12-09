@@ -1,20 +1,21 @@
 import { useState } from 'react';
-import { useLocation } from 'wouter';
+import { Link } from 'wouter';
 import './Search.css';
 
 export default function Search() {
-  const [location, setLocation] = useLocation('#');
   const [query, setQuery] = useState('');
   return (
-    <form onSubmit={() => setLocation(`/gif/${query}`)}>
+    <form>
       <div>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type="text"
           placeholder="Busca todos los Gifs que quieras"
-        ></input>
-        <button type="submit">Buscar</button>
+        />
+        <Link to={`/gifs/${query}`} type="submit">
+          <a className="button">Buscar</a>
+        </Link>
       </div>
     </form>
   );
